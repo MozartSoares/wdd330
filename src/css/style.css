@@ -30,6 +30,13 @@ header {
   justify-content: space-between;
   padding: 0 10px;
 }
+.bold {
+  font-weight: bold;
+}
+.crossed-out {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
 .logo {
   line-height: 60px;
   width: 245px;

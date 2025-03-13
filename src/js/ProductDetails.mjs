@@ -37,7 +37,8 @@ class ProductDetails {
           id="productImage"
           class="divider"
         />
-        <p id="productPrice" class="product-card__price">$${product.FinalPrice}</p>
+        <p id="productOriginalPrice" class="product__original-price bold">Original price <span class="crossed-out" >$${product.SuggestedRetailPrice}</span></p>
+        <p id="productPrice" class="product-card__price bold">Price with discount $${product.FinalPrice}</p>
         <p id="productColor" class="product__color">${product.Colors[0].ColorName}</p>
         <p id="productDesc" class="product__description">${product.DescriptionHtmlSimple}</p>
         <div class="product-detail__add">
