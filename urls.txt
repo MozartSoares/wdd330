@@ -1,0 +1,2 @@
+trello team url: https://trello.com/b/z07FejF1/sleep-outside
+netlify prod url: https://bejewelled-custard-e197c2.netlify.app/
