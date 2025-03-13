@@ -1,4 +1,4 @@
-import { renderListWithTemplate } from "./utils.mjs";
+import { renderListWithTemplate } from './utils.mjs';
 
 class ProductList {
   constructor(category, dataSource, listHtmlElement) {
@@ -9,10 +9,8 @@ class ProductList {
 
   async init() {
     const list = await this.dataSource.getData();
-    const unavailableProductIds = ["989CG", "880RT"];
-    const availableList = list.filter(
-      (product) => !unavailableProductIds.includes(product.Id),
-    );
+    const unavailableProductIds = ['989CG', '880RT'];
+    const availableList = list.filter((product) => !unavailableProductIds.includes(product.Id));
     this.renderList(availableList);
   }
 
@@ -23,7 +21,7 @@ class ProductList {
 
 function productCardTemplate(product) {
   return `<li class="product-card">
-    <a href="product_pages/?product=">
+    <a href="product_pages/?product=${product.Id}">
       <img src="${product.Image}" alt="Image of ${product.Name}">
       <h2 class="card__brand">${product.Brand.Name}</h2>
       <h3 class="card__name">${product.Name}</h3>
