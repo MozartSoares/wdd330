@@ -27,13 +27,14 @@ class ProductDetails {
   }
 
   renderProductDetails(product) {
-    const productDetailsHtml = `
+    document.querySelector('#add-to-cart').dataset.id = product.Id;
+    return `
       <section class="product-detail">
         <h2>${product.Brand.Name}</h2>
         <h3 class="divider">${product.Name}</h3>
         <img
-          src="${product.Image}"
-          alt="Image of ${product.Name}"
+          src="${product.Images.PrimaryExtraLarge}"
+          alt="Image of ${product.NameWithoutBrand}"
           id="productImage"
           class="divider"
         />
@@ -45,8 +46,6 @@ class ProductDetails {
           <button id="addToCart" data-id="${product.Id}">Add to Cart</button>
         </div>
       </section>`;
-
-    document.querySelector('.product-detail').innerHTML = productDetailsHtml;
   }
 }
 

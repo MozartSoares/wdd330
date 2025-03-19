@@ -227,3 +227,14 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+.product-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+.product-grid img {
+  height: 50px;
+  width: 50px;
+}
