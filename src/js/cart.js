@@ -2,6 +2,10 @@ import { getLocalStorage, loadHeaderFooter } from './utils.mjs';
 loadHeaderFooter();
 function renderCartContents() {
   const cartItems = getLocalStorage('so-cart');
+  if (!cartItems) {
+    document.querySelector('.product-list').innerHTML = '<p>No items in cart</p>';
+    return;
+  }
   const htmlItems = cartItems.map((item) => cartItemTemplate(item));
   document.querySelector('.product-list').innerHTML = htmlItems.join('');
 }
